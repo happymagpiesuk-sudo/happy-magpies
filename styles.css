@@ -271,3 +271,8 @@ button:hover{
     color: #ffffff;
     transform: translateY(-3px);
 }
+
+.signup-note a {
+    color: #24324A;
+    font-weight: 600;
+}
