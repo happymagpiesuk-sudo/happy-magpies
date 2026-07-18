@@ -276,3 +276,120 @@ button:hover{
     color: #24324A;
     font-weight: 600;
 }
+
+.privacy-page {
+    min-height: 100vh;
+    background: #F8DDE8;
+    color: #24324A;
+    padding: 50px 20px;
+}
+
+.privacy-content {
+    width: min(820px, 100%);
+    margin: 0 auto;
+    padding: 55px 65px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 18px 50px rgba(36, 50, 74, 0.10);
+    line-height: 1.75;
+}
+
+.privacy-logo {
+    display: block;
+    width: min(300px, 75%);
+    height: auto;
+    margin: 35px auto 25px;
+}
+
+.privacy-content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 8vw, 72px);
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 12px;
+    color: #24324A;
+}
+
+.privacy-intro {
+    text-align: center;
+    color: #B81F68;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.privacy-updated {
+    text-align: center;
+    opacity: 0.65;
+    font-size: 14px;
+    margin-bottom: 45px;
+}
+
+.privacy-content h2 {
+    color: #B81F68;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 42px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F3C9D9;
+}
+
+.privacy-content p {
+    margin-bottom: 17px;
+}
+
+.privacy-content ul {
+    margin: 5px 0 22px 24px;
+}
+
+.privacy-content li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.privacy-content a {
+    color: #B81F68;
+    font-weight: 600;
+}
+
+.back-link {
+    display: inline-block;
+    color: #24324A !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 2px solid #24324A;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: #24324A;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .privacy-page {
+        padding: 20px 12px;
+    }
+
+    .privacy-content {
+        padding: 35px 24px;
+        border-radius: 20px;
+    }
+
+    .privacy-logo {
+        width: 230px;
+        margin-top: 30px;
+    }
+
+    .privacy-content h1 {
+        font-size: 48px;
+    }
+
+    .privacy-content h2 {
+        font-size: 21px;
+        margin-top: 34px;
+    }
+}
