@@ -110,6 +110,43 @@
       line-height: 1.65;
     }
 
+    .about-section {
+      width: 100%;
+      max-width: 1040px;
+      margin: 70px auto 20px;
+      padding-top: 60px;
+      border-top: 1px solid rgba(36, 50, 74, 0.14);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      box-shadow: 0 12px 28px rgba(36, 50, 74, 0.08);
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+
+    .about-signoff {
+      margin-top: 26px;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+    }
+
     .site-footer {
       width: 100%;
       max-width: 1040px;
@@ -142,6 +179,20 @@
     @media (max-width: 850px) {
       .promise-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-photo {
+        max-width: 280px;
+        margin: auto;
+      }
+
+      .about-content {
+        text-align: center;
       }
     }
 
@@ -202,8 +253,8 @@
 
       <p class="intro">
         Beautiful jewellery, thoughtful accessories and little treasures,
-        carefully chosen by a mother and daughter who believe sparkle
-        should never be saved for special occasions.
+        carefully chosen to help you feel confident, colourful and
+        completely yourself.
       </p>
 
       <hr class="hero-divider">
@@ -317,12 +368,11 @@
           </article>
 
           <article class="promise-card">
-            <span class="promise-icon" aria-hidden="true">👩‍👧</span>
-            <h3>Mother &amp; Daughter</h3>
+            <span class="promise-icon" aria-hidden="true">✨</span>
+            <h3>Something Different</h3>
             <p>
-              Happy Magpies is a family-run business, created by a mother and
-              daughter who love discovering beautiful little treasures.
-              We hope they bring a little sparkle to your day.
+              We love finding those special little treasures that make people ask,
+              <em>"Where did you get that?"</em>
             </p>
           </article>
 
@@ -343,6 +393,69 @@
               where we'll be popping up once we launch.
             </p>
           </article>
+
+        </div>
+
+      </section>
+
+      <section
+        class="about-section"
+        aria-labelledby="about-title"
+      >
+
+        <div class="about-grid">
+
+          <div class="about-photo-wrap">
+            <img
+              src="/images/meet-the-magpies.jpg"
+              alt="Sue and Jenny, the mother and daughter behind Happy Magpies"
+              class="about-photo"
+            >
+          </div>
+
+          <div class="about-content">
+
+            <p class="promise-eyebrow">
+              A Little Hello
+            </p>
+
+            <h2
+              id="about-title"
+              class="promise-title"
+            >
+              Meet the Magpies
+            </h2>
+
+            <p>
+              We're a mother and daughter who share a love of colourful accessories,
+              independent boutiques and finding those little treasures that nobody
+              else has discovered yet.
+            </p>
+
+            <p>
+              Jenny's favourite colour is sparkle. Sue believes every outfit deserves
+              the perfect pair of earrings. Jenny keeps Sue trendy, Sue keeps Jenny
+              classy, and together we spend far too long wandering through little
+              shops, encouraging each other that we definitely need
+              <em>"just one more."</em>
+            </p>
+
+            <p>
+              Every piece at Happy Magpies is something we'd genuinely wear ourselves,
+              chosen to help you feel confident, colourful and completely yourself.
+            </p>
+
+            <p class="about-signoff">
+              <strong>
+                Because life's too short to save the sparkle for special occasions.
+              </strong>
+            </p>
+
+            <p class="signature">
+              💛 Sue &amp; Jenny
+            </p>
+
+          </div>
 
         </div>
 
