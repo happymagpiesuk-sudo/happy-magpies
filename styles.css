@@ -1,13 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=Parisienne&display=swap');
+
+:root {
+    --powder-blue: #EAF4F8;
+    --navy: #24324A;
+    --gold: #D5A04E;
+    --white: #FFFFFF;
+    --soft-border: rgba(36, 50, 74, 0.14);
+    --soft-shadow: 0 18px 50px rgba(36, 50, 74, 0.10);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Inter, sans-serif;
-    background: #F8DDE8;
-    color: #24324A;
+    font-family: "Inter", sans-serif;
+    background: var(--powder-blue);
+    color: var(--navy);
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+button,
+input {
+    font: inherit;
 }
 
 /* ========================================
@@ -20,40 +42,48 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 72px 32px 54px;
     text-align: center;
-    padding: 40px;
 }
 
 .sparkle {
-    margin-bottom: 20px;
-    font-size: 34px;
+    margin-bottom: 22px;
+    color: var(--gold);
+    font-size: 30px;
+    line-height: 1;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    color: var(--navy);
     font-family: "Cormorant Garamond", serif;
-    font-size: 88px;
+    font-size: clamp(54px, 9vw, 88px);
     font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -1px;
 }
 
 h2 {
-    margin-bottom: 30px;
-    color: #B81F68;
-    font-size: 28px;
+    max-width: 760px;
+    margin-bottom: 28px;
+    color: var(--navy);
+    font-family: "Parisienne", cursive;
+    font-size: clamp(34px, 5vw, 52px);
     font-weight: 400;
+    line-height: 1.15;
 }
 
 .intro {
-    max-width: 650px;
-    margin-bottom: 45px;
-    font-size: 20px;
+    max-width: 680px;
+    margin-bottom: 42px;
+    font-size: 19px;
     line-height: 1.8;
 }
 
 .hero-logo {
     width: min(520px, 82vw);
     height: auto;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
 }
 
 /* ========================================
@@ -63,9 +93,9 @@ h2 {
 .launch-bar {
     width: 100%;
     overflow: hidden;
-    padding: 12px 0;
-    background: #B81F68;
-    color: #ffffff;
+    padding: 13px 0;
+    background: var(--navy);
+    color: var(--white);
 }
 
 .launch-track {
@@ -77,10 +107,17 @@ h2 {
 }
 
 .launch-track span {
-    font-size: 14px;
+    position: relative;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
+}
+
+.launch-track span::after {
+    content: "âœ¦";
+    margin-left: 56px;
+    color: var(--gold);
 }
 
 @keyframes launch-scroll {
@@ -103,35 +140,49 @@ h2 {
    BUTTONS
 ======================================== */
 
-.join-button {
-    display: inline-block;
-    padding: 18px 38px;
-    border-radius: 50px;
-    background: #B81F68;
-    color: #ffffff;
-    font-size: 18px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
+.join-button,
+button,
+.signup-button,
+.privacy-home-button {
+    border: 1px solid var(--navy);
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 8px 18px rgba(36, 50, 74, 0.12);
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.join-button:hover {
-    transform: translateY(-4px);
+.join-button {
+    display: inline-block;
+    padding: 16px 34px;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 button {
-    padding: 18px 38px;
-    border: none;
-    border-radius: 50px;
-    background: #B81F68;
-    color: #ffffff;
-    font-size: 18px;
+    padding: 16px 34px;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    transform: translateY(-4px);
+.join-button:hover,
+button:hover,
+.signup-button:hover,
+.privacy-home-button:hover {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 12px 24px rgba(36, 50, 74, 0.16);
+    transform: translateY(-3px);
 }
 
 /* ========================================
@@ -143,47 +194,47 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-width: 560px;
+    max-width: 590px;
     gap: 12px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .signup-input {
-    flex: 1 1 220px;
+    flex: 1 1 250px;
     min-width: 0;
     padding: 16px 18px;
-    border: 2px solid #24324A;
-    border-radius: 50px;
+    border: 1.5px solid var(--soft-border);
+    border-radius: 16px;
     outline: none;
-    background: #ffffff;
-    color: #24324A;
-    font: inherit;
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: 0 8px 24px rgba(36, 50, 74, 0.05);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.signup-input::placeholder {
+    color: rgba(36, 50, 74, 0.55);
 }
 
 .signup-input:focus {
-    border-color: #B81F68;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(213, 160, 78, 0.15);
 }
 
 .signup-button {
-    padding: 16px 30px;
-    border: none;
-    border-radius: 50px;
-    background: #B81F68;
-    color: #ffffff;
-    font: inherit;
+    padding: 16px 28px;
+    border-radius: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.signup-button:hover {
-    transform: translateY(-3px);
 }
 
 .signup-message {
     display: none;
     width: 100%;
-    margin-top: 8px;
-    color: #24324A;
+    margin-top: 10px;
+    color: var(--navy);
     font-weight: 600;
 }
 
@@ -195,19 +246,51 @@ button:hover {
     display: none;
 }
 
-.signup-note {
+.signup-note,
+.privacy-note {
     width: 100%;
-    margin-top: 2px;
-    color: #24324A;
-    font-size: 14px;
-    line-height: 1.5;
+    color: var(--navy);
+    line-height: 1.55;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.72;
 }
 
-.signup-note a {
-    color: #24324A;
+.signup-note {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.privacy-note {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.signup-note a,
+.privacy-note a {
+    color: var(--navy);
     font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+.signup-copy {
+    width: 100%;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.signup-copy h3 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-family: "Parisienne", cursive;
+    font-size: clamp(34px, 5vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.signup-copy p {
+    color: var(--navy);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* ========================================
@@ -218,9 +301,9 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin-top: 24px;
-    margin-bottom: 50px;
+    gap: 18px;
+    margin-top: 28px;
+    margin-bottom: 48px;
 }
 
 .social-icon {
@@ -229,23 +312,27 @@ button:hover {
     justify-content: center;
     width: 48px;
     height: 48px;
-    border: 2px solid #24324A;
+    border: 1.5px solid var(--navy);
     border-radius: 50%;
-    color: #24324A;
+    color: var(--navy);
     text-decoration: none;
-    transition: 0.3s;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .social-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 21px;
+    height: 21px;
     fill: currentColor;
 }
 
 .social-icon:hover {
-    border-color: #B81F68;
-    background: #B81F68;
-    color: #ffffff;
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--navy);
     transform: translateY(-3px);
 }
 
@@ -255,7 +342,23 @@ button:hover {
 
 @media (max-width: 600px) {
     .hero {
-        padding: 32px 20px;
+        min-height: auto;
+        padding: 52px 20px 36px;
+    }
+
+    .hero-logo {
+        width: min(410px, 88vw);
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    .intro {
+        margin-bottom: 34px;
+        font-size: 17px;
+        line-height: 1.7;
     }
 
     .signup-form {
@@ -263,16 +366,15 @@ button:hover {
         gap: 14px;
     }
 
-    .signup-input {
-        flex: none;
-        width: 100%;
-        min-height: 56px;
-        padding: 16px 20px;
-    }
-
+    .signup-input,
     .signup-button {
         flex: none;
         width: 100%;
+        min-height: 56px;
+    }
+
+    .social-links {
+        margin-bottom: 30px;
     }
 }
 
@@ -283,19 +385,19 @@ button:hover {
 .privacy-page {
     min-height: 100vh;
     padding: 48px 20px;
-    background: #F8DDE8;
-    color: #24324A;
+    background: var(--powder-blue);
+    color: var(--navy);
 }
 
 .privacy-card {
     width: 100%;
     max-width: 860px;
     margin: 0 auto;
-    padding: 54px 68px;
-    border: 2px solid rgba(36, 50, 74, 0.08);
-    border-radius: 30px;
-    background: #ffffff;
-    box-shadow: 0 20px 60px rgba(36, 50, 74, 0.12);
+    padding: 56px 68px;
+    border: 1px solid var(--soft-border);
+    border-radius: 28px;
+    background: var(--white);
+    box-shadow: var(--soft-shadow);
 }
 
 .privacy-back-link {
@@ -303,39 +405,42 @@ button:hover {
     align-items: center;
     gap: 8px;
     padding: 10px 17px;
-    border: 2px solid #24324A;
-    border-radius: 50px;
-    color: #24324A;
+    border: 1.5px solid var(--navy);
+    border-radius: 14px;
+    color: var(--navy);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    transition: 0.25s ease;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .privacy-back-link:hover {
-    background: #24324A;
-    color: #ffffff;
+    background: var(--navy);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
 .privacy-header {
     max-width: 650px;
-    margin: 36px auto 0;
+    margin: 38px auto 0;
     text-align: center;
 }
 
 .privacy-logo {
     display: block;
-    width: 250px;
+    width: 240px;
     max-width: 75%;
     height: auto;
-    margin: 0 auto 30px;
+    margin: 0 auto 28px;
 }
 
 .privacy-eyebrow {
     margin-bottom: 12px;
-    color: #D5A04E;
-    font-size: 13px;
+    color: var(--gold);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -343,7 +448,7 @@ button:hover {
 
 .privacy-header h1 {
     margin: 0 0 18px;
-    color: #24324A;
+    color: var(--navy);
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(52px, 8vw, 76px);
     font-weight: 600;
@@ -353,24 +458,24 @@ button:hover {
 .privacy-intro {
     max-width: 570px;
     margin: 0 auto 12px;
-    color: #B81F68;
+    color: var(--navy);
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .privacy-updated {
     margin: 0;
-    color: #24324A;
+    color: var(--navy);
     font-size: 13px;
-    opacity: 0.65;
+    opacity: 0.62;
 }
 
 .privacy-divider {
-    width: 80px;
-    height: 4px;
+    width: 72px;
+    height: 3px;
     margin: 38px auto 44px;
-    border-radius: 50px;
-    background: #D5A04E;
+    border-radius: 999px;
+    background: var(--gold);
 }
 
 .privacy-section {
@@ -380,11 +485,12 @@ button:hover {
 .privacy-section h2 {
     margin: 0 0 17px;
     padding-bottom: 11px;
-    border-bottom: 1px solid #F1CAD9;
-    color: #B81F68;
-    font-size: 24px;
-    font-weight: 650;
-    line-height: 1.25;
+    border-bottom: 1px solid rgba(36, 50, 74, 0.12);
+    color: var(--navy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .privacy-section p {
@@ -401,54 +507,46 @@ button:hover {
 .privacy-section li {
     margin-bottom: 10px;
     padding-left: 4px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .privacy-section li::marker {
-    color: #D5A04E;
+    color: var(--gold);
 }
 
 .privacy-section a,
 .privacy-footer a {
-    color: #B81F68;
-    font-weight: 650;
-    text-decoration-thickness: 1px;
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
 
 .privacy-section a:hover,
 .privacy-footer a:hover {
-    color: #24324A;
+    color: var(--gold);
 }
 
 .privacy-footer {
     margin-top: 54px;
     padding: 32px;
-    border-radius: 22px;
-    background: #F8DDE8;
+    border-radius: 20px;
+    background: var(--powder-blue);
     text-align: center;
 }
 
 .privacy-footer p {
     margin: 0 0 20px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .privacy-home-button {
     display: inline-block;
     padding: 14px 25px;
-    border-radius: 50px;
-    background: #B81F68;
-    color: #ffffff !important;
-    font-weight: 650;
+    border-radius: 14px;
+    font-weight: 600;
     text-decoration: none !important;
-    transition: 0.25s ease;
-}
-
-.privacy-home-button:hover {
-    background: #24324A;
-    color: #ffffff !important;
-    transform: translateY(-2px);
 }
 
 /* ========================================
@@ -470,7 +568,7 @@ button:hover {
     }
 
     .privacy-logo {
-        width: 200px;
+        width: 190px;
         margin-bottom: 24px;
     }
 
@@ -496,7 +594,7 @@ button:hover {
     }
 
     .privacy-section h2 {
-        font-size: 21px;
+        font-size: 25px;
     }
 
     .privacy-section p,
@@ -508,37 +606,4 @@ button:hover {
         margin-top: 42px;
         padding: 26px 20px;
     }
-}
-.signup-copy {
-    width: 100%;
-    margin-bottom: 2px;
-    text-align: center;
-}
-
-.signup-copy h3 {
-    margin-bottom: 8px;
-    color: #B81F68;
-    font-size: 25px;
-    font-weight: 650;
-}
-
-.signup-copy p {
-    color: #24324A;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.privacy-note {
-    width: 100%;
-    margin-top: 14px;
-    color: #24324A;
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: center;
-    opacity: 0.7;
-}
-
-.privacy-note a {
-    color: #24324A;
-    font-weight: 600;
 }
