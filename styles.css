@@ -115,8 +115,6 @@ h2 {
 }
 
 
-}
-
 @keyframes launch-scroll {
     from {
         transform: translateX(0);
