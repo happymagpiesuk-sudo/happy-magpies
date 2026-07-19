@@ -13,10 +13,11 @@
     content="Happy Magpies offers beautiful jewellery, thoughtful accessories and little treasures, carefully chosen by a mother and daughter."
   >
 
-  <title>Happy Magpies</title>
+  <meta name="theme-color" content="#EAF4F8">
+
+  <title>Happy Magpies | Jewellery, Accessories & Little Treasures</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
@@ -24,12 +25,146 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="/styles.css?v=5">
+  <link rel="stylesheet" href="/styles.css?v=6">
   <link rel="icon" type="image/png" href="/favicon.png">
+
+  <style>
+    .brand-description {
+      margin: 0 0 28px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .hero-divider {
+      width: 72px;
+      height: 3px;
+      margin: 6px auto 34px;
+      border: 0;
+      border-radius: 999px;
+      background: #D5A04E;
+    }
+
+    .promise-section {
+      width: 100%;
+      max-width: 1040px;
+      margin: 10px auto 12px;
+      padding: 54px 0 16px;
+      border-top: 1px solid rgba(36, 50, 74, 0.14);
+    }
+
+    .promise-eyebrow {
+      margin-bottom: 10px;
+      color: #D5A04E;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+
+    .promise-title {
+      margin-bottom: 34px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(38px, 5vw, 54px);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .promise-card {
+      min-height: 190px;
+      padding: 28px 22px;
+      border: 1px solid rgba(36, 50, 74, 0.14);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.56);
+      box-shadow: 0 12px 28px rgba(36, 50, 74, 0.06);
+    }
+
+    .promise-icon {
+      display: block;
+      margin-bottom: 18px;
+      color: #D5A04E;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .promise-card h3 {
+      margin-bottom: 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .promise-card p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .site-footer {
+      width: 100%;
+      max-width: 1040px;
+      margin: 18px auto 0;
+      padding: 34px 0 0;
+      border-top: 1px solid rgba(36, 50, 74, 0.14);
+      text-align: center;
+    }
+
+    .footer-copy {
+      margin-bottom: 12px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 23px;
+      font-weight: 600;
+    }
+
+    .footer-small {
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 1.6;
+      opacity: 0.68;
+    }
+
+    .footer-small a {
+      color: inherit;
+      font-weight: 600;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 850px) {
+      .promise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand-description {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+      }
+
+      .promise-section {
+        padding-top: 42px;
+      }
+
+      .promise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .promise-card {
+        min-height: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -39,12 +174,12 @@
     aria-label="Happy Magpies launching soon"
   >
     <div class="launch-track">
-      <span>✨ Launching Soon</span>
-      <span>🐦 Little treasures are coming</span>
-      <span>💖 Because everyone deserves a little sparkle</span>
-      <span>✨ Launching Soon</span>
-      <span>🐦 Little treasures are coming</span>
-      <span>💖 Because everyone deserves a little sparkle</span>
+      <span>Launching Soon</span>
+      <span>Little treasures are coming</span>
+      <span>Because everyone deserves a little sparkle</span>
+      <span>Launching Soon</span>
+      <span>Little treasures are coming</span>
+      <span>Because everyone deserves a little sparkle</span>
     </div>
   </div>
 
@@ -58,6 +193,10 @@
         class="hero-logo"
       >
 
+      <p class="brand-description">
+        Jewellery • Accessories • Little Treasures
+      </p>
+
       <h2>
         Because everyone deserves a little sparkle.
       </h2>
@@ -65,17 +204,19 @@
       <p class="intro">
         Beautiful jewellery, thoughtful accessories and little treasures,
         carefully chosen by a mother and daughter who believe sparkle
-        shouldn't be saved for special occasions.
+        should never be saved for special occasions.
       </p>
+
+      <hr class="hero-divider">
 
       <div class="signup-copy">
 
         <h3>
-          Be first to find the treasures ✨
+          Be first to find the treasures
         </h3>
 
         <p>
-          Join our flock for launch news, market dates and fresh finds.
+          Join our flock for new collections, market dates and fresh finds.
         </p>
 
       </div>
@@ -149,45 +290,127 @@
         title="Mailchimp signup response"
       ></iframe>
 
-      <div class="social-links">
+      <section
+        class="promise-section"
+        aria-labelledby="promise-title"
+      >
 
-        <a
-          href="https://www.instagram.com/happymagpiesuk"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Follow Happy Magpies on Instagram"
-          class="social-icon"
+        <p class="promise-eyebrow">
+          Our little promise
+        </p>
+
+        <h3
+          id="promise-title"
+          class="promise-title"
         >
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-3.5a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.25 6Z"/>
-          </svg>
-        </a>
+          Thoughtful finds, chosen with heart.
+        </h3>
 
-        <a
-          href="https://www.facebook.com/happymagpiesuk/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Follow Happy Magpies on Facebook"
-          class="social-icon"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path d="M13.5 22v-8h2.75l.4-3h-3.15V9.1c0-.87.24-1.46 1.53-1.46h1.63V5a21.8 21.8 0 0 0-2.38-.12c-2.36 0-3.98 1.44-3.98 4.08V11H7.62v3h2.68v8h3.2Z"/>
-          </svg>
-        </a>
+        <div class="promise-grid">
 
-      </div>
+          <article class="promise-card">
+            <span class="promise-icon" aria-hidden="true">♡</span>
+            <h3>Curated with Love</h3>
+            <p>
+              Thoughtfully chosen pieces we would genuinely wear,
+              gift and treasure ourselves.
+            </p>
+          </article>
+
+          <article class="promise-card">
+            <span class="promise-icon" aria-hidden="true">✦</span>
+            <h3>Mother &amp; Daughter</h3>
+            <p>
+              A joyful little family business created by Jenny and Sue,
+              with plenty of personality.
+            </p>
+          </article>
+
+          <article class="promise-card">
+            <span class="promise-icon" aria-hidden="true">◇</span>
+            <h3>Perfect for Gifting</h3>
+            <p>
+              Lovely little finds for birthdays, thank yous,
+              celebrations and well-earned treats.
+            </p>
+          </article>
+
+          <article class="promise-card">
+            <span class="promise-icon" aria-hidden="true">⌂</span>
+            <h3>Find Us at Markets</h3>
+            <p>
+              Come and browse our latest treasures in person,
+              have a natter and say hello.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+      <footer class="site-footer">
+
+        <p class="footer-copy">
+          Follow the treasure hunt
+        </p>
+
+        <div class="social-links">
+
+          <a
+            href="https://www.instagram.com/happymagpiesuk"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Happy Magpies on Instagram"
+            class="social-icon"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-3.5a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.25 6Z"/>
+            </svg>
+          </a>
+
+          <a
+            href="https://www.facebook.com/happymagpiesuk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Happy Magpies on Facebook"
+            class="social-icon"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M13.5 22v-8h2.75l.4-3h-3.15V9.1c0-.87.24-1.46 1.53-1.46h1.63V5a21.8 21.8 0 0 0-2.38-.12c-2.36 0-3.98 1.44-3.98 4.08V11H7.62v3h2.68v8h3.2Z"/>
+            </svg>
+          </a>
+
+        </div>
+
+        <p class="footer-small">
+          © <span id="current-year">2026</span> Happy Magpies
+        </p>
+
+        <p class="footer-small">
+          <a href="/privacy.html">Privacy Policy</a>
+        </p>
+
+      </footer>
 
     </section>
 
   </main>
 
   <script src="/script.js"></script>
+
+  <script>
+    const yearElement = document.getElementById("current-year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
 
 </body>
 </html>
