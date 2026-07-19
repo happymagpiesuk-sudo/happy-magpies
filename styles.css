@@ -114,10 +114,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.launch-track span::after {
-    content: "✦";
-    margin-left: 56px;
-    color: var(--gold);
+
 }
 
 @keyframes launch-scroll {
